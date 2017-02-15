@@ -3,6 +3,7 @@
  *  - TL-WA750RE v1
  *  - TL-WA801ND v2
  *  - TL-WA850RE v1/v2
+ *  - TL-WA854RE v1/v2
  *  - TL-WA855RE v1
  *  - TL-WA901ND v3
  *
@@ -48,7 +49,6 @@
 #define TL_WA850RE_V2_GPIO_LED_SIGNAL4	3
 #define TL_WA850RE_V2_GPIO_LED_SIGNAL5	4
 #define TL_WA850RE_V2_GPIO_LED_WLAN	13
-
 #define TL_WA850RE_V2_GPIO_ENABLE_LEDS	15
 
 #define TL_WA855REV1_GPIO_LED_RED	11
@@ -377,6 +377,9 @@ static void  __init tl_wa850re_setup(void)
 MIPS_MACHINE(ATH79_MACH_TL_WA850RE, "TL-WA850RE", "TP-LINK TL-WA850RE",
 	     tl_wa850re_setup);
 
+MIPS_MACHINE(ATH79_MACH_TL_WA854RE, "TL-WA854RE", "TP-LINK TL-WA854RE",
+	     tl_wa850re_setup);
+
 static void  __init tl_wa850re_v2_setup(void)
 {
 	tl_ap143_setup();
@@ -400,6 +403,9 @@ static void  __init tl_wa850re_v2_setup(void)
 
 MIPS_MACHINE(ATH79_MACH_TL_WA850RE_V2, "TL-WA850RE-V2",
 	     "TP-LINK TL-WA850RE v2", tl_wa850re_v2_setup);
+
+MIPS_MACHINE(ATH79_MACH_TL_WA854RE_V2, "TL-WA854RE-V2",
+	     "TP-LINK TL-WA854RE v2", tl_wa850re_v2_setup);
 
 static void __init tl_wa855re_v1_setup(void)
 {
